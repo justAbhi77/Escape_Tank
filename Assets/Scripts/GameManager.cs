@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] Transform Plr1, Plr1_turrent, Plr1_shoot, Plr2, Plr2_turrent, Plr2_shoot;
+    [SerializeField] Transform Plr1, Plr1_turret, Plr1_shoot, Plr2, Plr2_turret, Plr2_shoot;
 
-    [SerializeField] float speed = 5f, rotationSpeed = 100.0f, turrent_rot = 2f;
+    [SerializeField] float speed = 5f, rotationSpeed = 100.0f, turret_rot = 2f;
 
     [SerializeField] GameObject Shell;
 
@@ -23,26 +23,27 @@ public class GameManager : MonoBehaviour
         Plr1.Rotate(0, Plr1_horizontalInput, 0);
         Plr2.Rotate(0, Plr2_horizontalInput, 0);
 
+        float x = 0;
 
         if (Input.GetKey(KeyCode.Comma))
         {
-            Plr1_turrent.RotateAround(Plr1_turrent.position, Plr1_turrent.right, -turrent_rot);
+            Plr1_turret.RotateAround(Plr1_turret.position, Plr1_turret.right, -turret_rot);
         }
         else if (Input.GetKey(KeyCode.Period))
         {
-            Plr1_turrent.RotateAround(Plr1_turrent.position, Plr1_turrent.right, turrent_rot);
+            Plr1_turret.RotateAround(Plr1_turret.position, Plr1_turret.right, turret_rot);
         }
-        if (Input.GetKeyDown(KeyCode.Slash))
+        else if (Input.GetKeyDown(KeyCode.Slash))
         {
             Instantiate(Shell, Plr1_shoot.position, Plr1_shoot.rotation);
         }
         if (Input.GetKey(KeyCode.Q))
         {
-            Plr2_turrent.RotateAround(Plr2_turrent.position, Plr2_turrent.right, -turrent_rot);
+            Plr2_turret.RotateAround(Plr2_turret.position, Plr2_turret.right, -turret_rot);
         }
         else if (Input.GetKey(KeyCode.E))
         {
-            Plr2_turrent.RotateAround(Plr2_turrent.position, Plr2_turrent.right, turrent_rot);
+            Plr2_turret.RotateAround(Plr2_turret.position, Plr2_turret.right, turret_rot);
         }
         else if (Input.GetKeyDown(KeyCode.Space))
         {

@@ -266,14 +266,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Plr1: {fileID: 1347262593}
-  Plr1_turrent: {fileID: 1302116184}
+  Plr1_turret: {fileID: 1302116184}
   Plr1_shoot: {fileID: 1347262594}
   Plr2: {fileID: 2028725207}
-  Plr2_turrent: {fileID: 1256120268}
+  Plr2_turret: {fileID: 1256120268}
   Plr2_shoot: {fileID: 857706381}
   speed: 5
   rotationSpeed: 100
-  turrent_rot: 2
+  turret_rot: 2
+  Turret_Clamp_Min: 10
+  Turret_Clamp_Max: 45
   Shell: {fileID: 4826483851065257886, guid: c2af5c94c34f8d14691f6e75ddf27ebf, type: 3}
 --- !u!1 &705507993
 GameObject:
@@ -537,8 +539,8 @@ MonoBehaviour:
   - {fileID: 1347262593}
   - {fileID: 2028725207}
   offset: {x: 0, y: -7, z: 0}
-  minzoom: 40
-  maxZoom: 80
+  minzoom: 50
+  maxZoom: 60
 --- !u!4 &1256120268 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2116474828858362380, guid: ecf9d1db67bf10144a4956d1531fbc26, type: 3}
@@ -556,6 +558,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4099047435232665903, guid: fd63aeed02198b04e840fd97dc9f719a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4099047435232665903, guid: fd63aeed02198b04e840fd97dc9f719a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4099047435232665903, guid: fd63aeed02198b04e840fd97dc9f719a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4099047435232665903, guid: fd63aeed02198b04e840fd97dc9f719a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4099047435232665903, guid: fd63aeed02198b04e840fd97dc9f719a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5732972213666418603, guid: fd63aeed02198b04e840fd97dc9f719a, type: 3}
       propertyPath: m_RootOrder
       value: 4
